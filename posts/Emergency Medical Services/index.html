@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Dohyo Jeong">
-<meta name="dcterms.date" content="2024-04-15">
+<meta name="dcterms.date" content="2025-02-22">
 
-<title>Spatiotemporal Demand Forecasting and Resource Optimization – Dohyo Jeong</title>
+<title>Emergency Medical Service Spatiotemporal Prediction Model – Dohyo Jeong</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Spatiotemporal Demand Forecasting and Resource Optimization</h1>
+<h1 class="title">Emergency Medical Service Spatiotemporal Prediction Model</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Machine Learning</div>
     <div class="quarto-category">Public Health</div>
@@ -147,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 15, 2024</p>
+      <p class="date">February 22, 2025</p>
     </div>
   </div>
   
@@ -159,14 +159,83 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="enhancing-emergency-medical-services-through-spatiotemporal-demand-forecasting-and-resource-optimization-a-deep-learning-approach" class="level2">
-<h2 class="anchored" data-anchor-id="enhancing-emergency-medical-services-through-spatiotemporal-demand-forecasting-and-resource-optimization-a-deep-learning-approach">Enhancing Emergency Medical Services through Spatiotemporal Demand Forecasting and Resource Optimization: A Deep Learning Approach</h2>
-<p>See <a href="ASPA2024_EMS.pdf">Paper Presentation</a></p>
-<p><strong>Objective:</strong> This study aims to enhance the efficiency of Emergency Medical Services (EMS) by developing a spatiotemporal demand forecasting model using deep learning techniques. The goal is to predict EMS demand more accurately and optimize the allocation of EMS resources across different regions, particularly focusing on areas with healthcare access disparities.</p>
-<p><strong>Method and Data:</strong> The study uses EMS data from 963,676 cases recorded between January 2016 and December 2021 in Chungcheongnam-do, South Korea. Data on population demographics were sourced from the Korean Statistical Information Service (KOSIS). The methodology employs Spatial-Temporal Graph Convolutional Networks (ST-GCN) to capture the dynamic, regional variations in EMS demand and the Maximum Coverage Location Problem (MCLP) to optimize resource allocation. The model predicts EMS demand hourly and identifies optimal locations for EMS centers based on predicted demand patterns.</p>
-<p><strong>Results:</strong> The results indicate significant spatial and temporal disparities in EMS demand, particularly in non-metropolitan areas. The ST-GCN model successfully accurately predicted response times, demonstrating a Mean Absolute Error (MAE) of 0.303 minutes. The MCLP optimization suggests that current EMS centers are unevenly distributed, with certain regions showing an over-concentration of resources while others remain underserved. The findings underscore the need for a data-driven reallocation of EMS resources to improve access and reduce response times, particularly for fire-related incidents and in rural areas. This study provides valuable insights for policymakers aiming to optimize EMS resource allocation and improve emergency response in regions with healthcare access disparities.</p>
+<section id="where-and-when-predicting-emergency-medical-service-demands-through-spatial-temporal-graph-convolutional-networks" class="level1">
+<h1>Where and When? Predicting Emergency Medical Service Demands through Spatial-Temporal Graph Convolutional Networks</h1>
+<p>Emergency Medical Services (EMS) are critical in safeguarding public health through timely emergency care. However, EMS demand varies significantly across time and space due to population density, traffic patterns, and regional infrastructure. This study develops a spatiotemporal predictive model to optimize EMS resource allocation by integrating both dynamics. The study analyzed EMS call data of 27,989 cases from Jeollabuk-do, South Korea during January-December 2023, using Spatial-Temporal Graph Convolutional Networks (ST-GCN) to predict patterns across rescue units, safety centers, and local stations. The model predicted call frequency, response time, and travel speed, followed by K-means clustering to identify regional vulnerability patterns. ST-GCN predictions revealed distinct center-specific patterns, with rescue units showing concentrated activity during night hours while safety centers were busiest during daytime. High-demand clusters were concentrated in urban centers, with demand spreading to satellite cities, while rural areas showed lower frequency but longer response times due to distance. K-means clustering based on both averages and variability identified four distinct regional patterns: stable rural areas, speed-unstable suburban regions, high-demand-volatile urban centers, and response-time-unstable remote areas. This study advances EMS resource optimization by demonstrating how integrated spatiotemporal modeling can improve service delivery. The findings support dynamic, data-driven resource allocation strategies and highlight the need for center-specific operational approaches.</p>
+<p><strong>Keywords</strong>: Emergency Medical Services, Spatiotemporal Prediction, Graph Neural Networks, Service Vulnerability, Regional Disparity</p>
+<p><br></p>
+<section id="st-gcn-prediction-results-by-center-level" class="level2">
+<h2 class="anchored" data-anchor-id="st-gcn-prediction-results-by-center-level">ST-GCN Prediction Results by Center Level</h2>
+<p>These animations present a timeline of predicted outcomes across regions in the study area, illustrating hourly variations from 0 to 23.</p>
+<p><br></p>
+<section id="regional-rescue-hq" class="level3">
+<h3 class="anchored" data-anchor-id="regional-rescue-hq"><strong>1) Regional Rescue HQ</strong></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Predicted EMS Call Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/level1_freq_timetrend-02.gif" class="img-fluid" width="600"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Predicted Response Time (min)</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/level1_RT_timetrend2-01.gif" class="img-fluid" width="600"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</section>
+<section id="safety-center" class="level3">
+<h3 class="anchored" data-anchor-id="safety-center"><strong>2) 911 Safety Center</strong></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Predicted EMS Call Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/level2_freq_timetrend-01.gif" class="img-fluid" width="600"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Predicted Response Time (min)</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/level2_RT_timetrend2-01.gif" class="img-fluid" width="600"></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+</section>
+<section id="local-response-team" class="level3">
+<h3 class="anchored" data-anchor-id="local-response-team"><strong>3) Local Response Team</strong></h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Predicted EMS Call Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/level3_freq_timetrend-01.gif" class="img-fluid" width="600"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Predicted Response Time (min)</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><img src="images/level3_RT_timetrend-01.gif" class="img-fluid" width="600"></td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
